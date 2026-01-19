@@ -1,0 +1,50 @@
+# Compilados e build
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+
+# IDE - IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# IDE - Eclipse
+.classpath
+.project
+.settings/
+
+# IDE - VS Code
+.vscode/
+
+# IDE - NetBeans
+nbproject/
+build/
+nbbuild/
+dist/
+nbdist/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Arquivos de estado do programa
+estado_processo.json
+
+# Arquivos CSV gerados (opcional - remova se quiser versionar)
+*.csv
+
+# Logs
+*.log
