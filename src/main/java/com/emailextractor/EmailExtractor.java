@@ -255,17 +255,26 @@ public class EmailExtractor {
             senha = scanner.nextLine();
         }
 
-        System.out.print("Informe o servidor IMAP (ex: imap.gmail.com): ");
+        System.out.print("Informe o servidor IMAP (padrão: imap.gmail.com): ");
         String servidor = scanner.nextLine().trim();
+        if (servidor.isEmpty()) {
+            servidor = "imap.gmail.com";
+            System.out.println("Usando servidor padrão: imap.gmail.com");
+        }
 
-        System.out.print("Informe a porta IMAP (ex: 993): ");
+        System.out.print("Informe a porta IMAP (padrão: 993): ");
         String portaStr = scanner.nextLine().trim();
         int porta;
-        try {
-            porta = Integer.parseInt(portaStr);
-        } catch (NumberFormatException e) {
-            System.err.println("Porta inválida! Usando porta padrão 993.");
+        if (portaStr.isEmpty()) {
             porta = 993;
+            System.out.println("Usando porta padrão: 993");
+        } else {
+            try {
+                porta = Integer.parseInt(portaStr);
+            } catch (NumberFormatException e) {
+                System.err.println("Porta inválida! Usando porta padrão 993.");
+                porta = 993;
+            }
         }
 
         System.out.print("Informe o nome do arquivo CSV para salvar (padrão: contatos.csv): ");

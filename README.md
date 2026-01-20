@@ -135,15 +135,26 @@ mvn -version
 
 ### 3. Configurar o Provedor de E-mail
 
-#### Gmail
+#### Gmail (Importante!)
+
+> **Atenção:** O Gmail não permite login com senha normal para aplicativos de terceiros. É obrigatório usar uma **Senha de App**.
+
+**Passo a passo para gerar a Senha de App:**
+
 1. Acesse [Configurações da Conta Google](https://myaccount.google.com/)
-2. Ative a **Verificação em duas etapas**
-3. Gere uma **Senha de App** em: Segurança → Senhas de app
-4. Use a senha de app gerada (não a senha normal da conta)
+2. Vá em **Segurança** no menu lateral
+3. Ative a **Verificação em duas etapas** (2FA) se ainda não estiver ativa
+   - Isso é obrigatório para poder criar senhas de app
+4. Após ativar o 2FA, volte em **Segurança**
+5. Procure por **Senhas de app** (ou acesse diretamente: [https://myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords))
+6. Clique em **Selecionar app** → escolha "Outro (nome personalizado)"
+7. Digite um nome (ex: "Email Extractor") e clique em **Gerar**
+8. Copie a senha de 16 caracteres gerada (sem espaços)
+9. **Use essa senha no programa**, não a senha normal da sua conta Google
 
 **Configurações de conexão:**
-- Servidor IMAP: `imap.gmail.com`
-- Porta: `993`
+- Servidor IMAP: `imap.gmail.com` (padrão, basta pressionar Enter)
+- Porta: `993` (padrão, basta pressionar Enter)
 
 #### Outlook/Hotmail
 - Servidor IMAP: `outlook.office365.com`
